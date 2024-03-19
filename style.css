@@ -1,0 +1,443 @@
+/* load font*/
+
+/* @font-face {
+  font-family: "ProximaNova";
+  src: url("Proxima Nova Font.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("BebasNeue-Regular.ttf") format("opentype");
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "ProximaNova";
+}
+
+#map {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  
+}
+
+/* custom control / custom button */
+.toggle-layers-control {
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: auto;
+  background-image: url(base-map-toggle.png);
+}
+
+/* end custom control / custom button */
+
+/* custom control / custom button */
+.toggle-legend-control {
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: auto;
+  background-image: url(https://uploads-ssl.webflow.com/650167c877dd38466d76ae92/65d4b1553f976f175b31cfb9_toggle-legend.png);
+}
+
+/* end custom control / custom button */
+
+div.toggle-legend-box {
+  background-color: #ffffff;
+  color: #000000;
+  z-index: 1;
+
+}
+
+.toggle-legend-box-image {
+  width: 100%;
+  height: 310px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+div.welcome-content {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  height: 85%;
+}
+
+button.welcome-button {
+  display: block;
+  float: left;
+  height: 47px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  width: 186px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.first-welcome-button {
+  display: block;
+  height: 47px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  width: 186px;
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+span.welcome-close-button {
+  float: right;
+  border-radius: 21px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  width: 26px;
+  height: 26px;
+  font-size: 14px;
+  /* color: #E94E1B; */
+  cursor: pointer;
+  margin-top: 14px;
+    margin-right: 9px;
+  padding: 0;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+
+span.welcome-close-button:hover {
+  /* border-color: #E94E1B; */
+  /* background-color: #E94E1B; */
+  color: #252424;
+  background-color: #ffffff;
+  border: 1px solid #252424;
+}
+
+.sidebar-content-inner {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.visible-legend-box {
+  display: block;
+    position: relative;
+    border-radius: 7px;
+    background-color: white;
+    z-index: 2001;
+    position: absolute;
+    width: 283px;
+    height: 327px;
+    right: 10px;
+    top: 10%;
+}
+
+div.welcome-content {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  height: 85%;
+}
+
+
+div.toggle-legend-box {
+  float: right;
+    right: 15px;
+    margin-top: -471px;
+    position: relative;
+    color: #000000;
+}
+
+img.legend-image {
+  width: 35px;
+  float: right;
+  margin-right: 4px;
+  margin-top: -6px;
+}
+
+div#legend-items {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+div#legend-items > div{
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.marker {
+  border: none;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+}
+
+.marker:hover {
+  color: pointer;
+}
+
+/*popup styling*/
+
+.mapboxgl-popup-close-button {
+  float: right;
+    right: 15px;
+    border-radius: 21px;
+    border: 1px solid #363532;
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    color: #363532;
+    cursor: pointer;
+    margin-top: 22px;
+    vertical-align: top;
+    line-height: 10px;
+}
+
+.mapboxgl-popup-close-button:hover {
+  border-color: #363532;
+  background-color: #363532;
+  color: #ffffff;
+}
+
+.mapboxgl-popup-tip {
+  margin-left: 1%;
+}
+
+div#pins-explanation > span{
+      display: inline-block;
+    text-align: left;
+    width: 249px;
+    position: relative;
+    top: 7px;
+    font-size: 12px;
+    line-height: 20px;
+}
+div#zoom-button-explanation > span{
+  display: inline-block;
+    width: 214px;
+    position: relative;
+    top: -13px;
+    left: -1px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+}
+div#zoom-button-explanation > img{
+  position: relative;
+    right: -27px;
+    width: 18px;
+    top: -28px;
+}
+
+.mapboxgl-popup-content {
+  border-radius: 0;
+  background-color: #ffffff;
+  height: 210px;
+  width: 282px;
+  padding: 8px;
+  border-radius: 10px;
+  padding-bottom: 0;
+  padding-right: 20px;
+    padding-left: 17px;
+}
+
+div.popup-details {
+  font: 20px "ProximaNova", sans-serif;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+
+div.popup-details a.contacts {
+  text-decoration: none;
+  color: #363532;
+  font-size: 16px;
+  text-align: left;
+  display: inline-flex;
+  outline: none;
+}
+div.popup-details a.contacts:hover {
+  text-decoration: none;
+  color: #363532;
+}
+
+div.popup-details a.contacts > span.contacts-text {
+  margin-top: 3px;
+  padding-left: 3px;
+}
+
+div.popup-details a.url-button {
+  font: 16px "ProximaNova", sans-serif;
+    display: block;
+    padding-top: 8px;
+    width: 131px;
+    text-align: justify;
+    background-color: #363532;
+    color: #ffffff;
+    margin-left: 56px;
+    padding-left: 17px;
+    height: 32px;
+    border: 1px solid #363532;
+    text-decoration: none;
+    border-radius: 10px;
+}
+div.popup-details a.url-button:hover {
+  background-color: #ffffff;
+  color: #363532;
+  text-decoration: none;
+}
+
+div.popup-details i.fa {
+  margin-left: 0;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #509f71;
+}
+
+sidebar-content-inner > h1{
+  font-size: 30px !important;
+}
+
+div.mapboxgl-popup-content div.popup-image img {
+  width: 300px;
+  max-height: 250px;
+}
+
+h1.welcome-popup{
+font-size: 30px !important;
+}
+
+div.title,
+div.marker-popup-icon{
+  display: inline-block;
+}
+
+div.marker-popup-icon{
+  margin-top: -1px;
+    position: absolute;
+    left: 12px;
+    top: 24px;
+}
+
+div.marker-popup-icon> img{
+  width: 33px;
+  
+}
+.mapboxgl-popup-content div.title {
+  font: 18px "BebasNeue";
+  color: #363532;
+  text-align: center;
+  /* font-weight: bold; */
+  line-height: 21px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  width: 204px;
+ margin-left: 25px;
+}
+
+.mapboxgl-popup-content div.content {
+  /* height: 113px; */
+  width: 98%;
+  border-radius: 8px;
+  /* background-color: #ffffff; */
+  color: #363532;
+  text-align: left;
+  margin-top: 10px;
+}
+
+div.mapboxgl-popup-content > div.content > span.city {
+  position: absolute;
+  padding-top: 5px;
+  margin-left: 15px;
+}
+
+div.mapboxgl-popup-content div.popup-link {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  border-bottom-color: #85bbd7;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+  border-top-color: #85bbd7;
+}
+
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+  border-right-color: #85bbd7;
+}
+
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+  border-left-color: #85bbd7;
+}
+
+#map
+  > div.mapboxgl-popup.mapboxgl-popup-anchor-bottom
+  > div.mapboxgl-popup-content
+  > div.popup-type-image {
+  margin-bottom: 15px;
+  margin-left: 25%;
+}
+#map
+  > div.mapboxgl-popup.mapboxgl-popup-anchor-bottom
+  > div.mapboxgl-popup-content
+  > div.popup-type-image
+  > img {
+  width: 24px;
+}
+#map
+  > div.mapboxgl-popup.mapboxgl-popup-anchor-bottom
+  > div.mapboxgl-popup-content
+  > div.popup-type-image
+  > span {
+  margin-top: 2px;
+  margin-left: 5px;
+  position: absolute;
+}
+
+/*end popup styling*/
+
+
+
+@media screen and (max-width: 380px) {
+  div.mapboxgl-popup-content div.popup-image img {
+    width: 240px;
+    max-height: 250px;
+  }
+
+  .mapboxgl-popup-content div.title {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  div.popup-details {
+    margin-bottom: 0;
+  }
+
+  div.popup-details a.contacts {
+    font-size: 11px;
+  }
+}
