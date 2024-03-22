@@ -197,9 +197,10 @@ div#legend-items > div{
 .mapboxgl-popup-close-button {
   float: right;
     right: 15px;
-    border-radius: 21px;
-    border: 1px solid #363532;
+    /* border-radius: 21px;
+    border: 1px solid #363532; */
     background-color: #ffffff;
+    background-image: url(https://uploads-ssl.webflow.com/650167c877dd38466d76ae92/65fd66f66ea45f7aa649b908_close-button.svg);
     width: 20px;
     height: 20px;
     font-size: 12px;
@@ -211,9 +212,9 @@ div#legend-items > div{
 }
 
 .mapboxgl-popup-close-button:hover {
-  border-color: #363532;
+  /* border-color: #363532;
   background-color: #363532;
-  color: #ffffff;
+  color: #ffffff; */
 }
 
 .mapboxgl-popup-tip {
