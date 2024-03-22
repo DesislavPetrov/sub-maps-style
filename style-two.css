@@ -211,11 +211,8 @@ div#legend-items > div{
     line-height: 10px;
 }
 
-.mapboxgl-popup-close-button:hover {
-  /* border-color: #363532;
-  background-color: #363532;
-  color: #ffffff; */
-}
+/* .mapboxgl-popup-close-button:hover {
+} */
 
 .mapboxgl-popup-tip {
   margin-left: 1%;
