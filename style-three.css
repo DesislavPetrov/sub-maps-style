@@ -195,6 +195,7 @@ div#legend-items > div{
 /*popup styling*/
 
 .mapboxgl-popup-close-button {
+  display: none;
   float: right;
     right: 15px !important;
     /* border-radius: 21px;
@@ -324,7 +325,8 @@ font-size: 30px !important;
 }
 
 div.title,
-div.marker-popup-icon{
+div.marker-popup-icon,
+div.marker-popup-custom-close-button{
   display: inline-block;
 }
 
@@ -335,10 +337,26 @@ div.marker-popup-icon{
     top: 24px;
 }
 
+div.marker-popup-custom-close-button{
+  margin-top: -1px;
+    position: absolute;
+    right: 20px;
+    top: 24px;
+}
+div.marker-popup-custom-close-button:hover{
+  cursor: pointer;
+}
+
 div.marker-popup-icon> img{
   width: 33px;
   
 }
+
+div.marker-popup-custom-close-button> img{
+  width: 18px;
+  
+}
+
 .mapboxgl-popup-content div.title {
   font: 18px "BebasNeue";
   color: #363532;
